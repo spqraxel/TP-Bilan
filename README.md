@@ -1,5 +1,9 @@
 # Comment utiliser Docker ?
 
+## Machine d'exemple :
+- IP : 192.168.20.180
+- WordPress : IP:8090
+- Zabbix : IP
 ---
 
 ## Installer Docker et Docker-compose
@@ -31,7 +35,7 @@
 
 ---
 
-### Une fois les étapes terminées, vous avez Docker et GIT installés. Nous allons maintenant lancer plusieurs containers pour avoir ZABBIX. Pour ce faire, exécutez les commandes suivantes, ou vous pouvez trouver un script après cette partie :
+## Une fois les étapes terminées, vous avez Docker et GIT installés. Nous allons maintenant lancer plusieurs containers pour avoir ZABBIX. Pour ce faire, exécutez les commandes suivantes, ou vous pouvez trouver un script après cette partie :
 
 - Créer un réseau Docker pour ZABBIX :
   ```bash
