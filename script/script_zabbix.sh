@@ -1,3 +1,5 @@
+docker network create --subnet 172.20.0.0/16 --ip-range 172.20.240.0/20 zabbix-net
+
 docker run --name mysql-server -t \
              -e MYSQL_DATABASE="zabbix" \
              -e MYSQL_USER="zabbix" \
