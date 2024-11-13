@@ -4,7 +4,7 @@
 
 ## Installer Docker et Docker-compose
 
-- Pour ce faire, rien de plus simple ! Une fois sur votre machine en SSH (ou non), exécutez : 
+- Pour ce faire, rien de plus simple ! Une fois sur votre machine en SSH (ou non, mais vous pouvez Copier coller avec ce dernier), exécutez : 
   ```bash
   cd /home
   ```
