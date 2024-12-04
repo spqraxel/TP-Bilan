@@ -1,7 +1,6 @@
 # Comment utiliser Docker ?
 
 ## Machine d'exemple :
-- IP : 192.168.20.180
 - WordPress : IP:8090
 - Zabbix : IP
 ---
@@ -99,6 +98,11 @@
   sh script_zabbix.sh
   ```
 
+#### Vous avez également un docker-compose dans le dossier `Docker-Compose/zabbix` :
+  ```bash
+docker-compose up -d
+  ```
+
 - Vous pouvez alors accéder à votre ZABBIX via l'IP de votre machine principale.
 
 ---
@@ -134,6 +138,12 @@
 ### Vous avez également un script dans le dépôt :
   ```bash
   sh script_wordpress.sh
+  ```
+
+
+#### Vous avez également un docker-compose dans le dossier `Docker-Compose/wordpress` :
+  ```bash
+docker-compose up -d
   ```
 
 - Vous pouvez ensuite accéder à votre WordPress à l'adresse : `IP:8090` dans votre navigateur web.
