@@ -1,0 +1,43 @@
+version: '3.7'
+
+networks:
+  wordpress-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 220.20.0.0/16
+          ip_range: 220.20.240.0/20
+
+services:
+  mysql-server-wordpress:
+    image: mysql:8.0-oracle
+    container_name: mysql-server-wordpress
+    environment:
+      MYSQL_DATABASE: "wordpress"
+      MYSQL_USER: "wordpress"
+      MYSQL_PASSWORD: "wordpress_pwd"
+      MYSQL_ROOT_PASSWORD: "root_pwd"
+    networks:
+      wordpress-net:
+        ipv4_address: 220.20.240.2
+    command: >
+      --character-set-server=utf8
+      --collation-server=utf8_bin
+      --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    networks:
+      wordpress-net:
+        ipv4_address: 220.20.240.3
+    environment:
+      WORDPRESS_DB_HOST: "mysql-server-wordpress"
+      WORDPRESS_DB_USER: "wordpress"
+      WORDPRESS_DB_PASSWORD: "wordpress_pwd"
+      WORDPRESS_DB_NAME: "wordpress"
+    ports:
+      - "8090:80"
+    restart: unless-stopped
+
