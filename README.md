@@ -30,6 +30,8 @@
   Puis lancez le script d'installation de Docker : 
   ```bash
   sh install_docker.sh
+
+  Il est possible que pendant l'importation install_docker na aucun droit, de fait : chmod 777 install_docker.sh
   ```
 
 ---
